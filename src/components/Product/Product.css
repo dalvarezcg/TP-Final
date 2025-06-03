@@ -1,0 +1,131 @@
+/* Product.css */
+.product-card {
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-image-container {
+    width: 100%;
+    height: 200px; /* Tamaño fijo para las imágenes */
+    overflow: hidden;
+    position: relative;
+    background: #f7f7f7;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio manteniendo proporciones */
+    transition: transform 0.5s ease;
+  }
+  
+  .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+  
+  .product-info {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-title {
+    font-size: 15px;
+    color: #333;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 42px; /* Altura fija para 2 líneas */
+  }
+  
+  .product-price {
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-top: auto; /* Empuja el precio hacia abajo */
+    padding-top: 8px;
+  }
+  
+  /* Efecto de "nuevo" o "oferta" opcional */
+  .product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1;
+  }
+
+  /* Agrega esto a tu archivo Product.css */
+
+.divButton {
+  margin-top: 10px;
+}
+
+/* Versión con ícono */
+.divButton button {
+  padding: 2px 8px 2px 6px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #495057;
+}
+
+.divButton button:hover {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+.divButton button svg {
+  width: 12px;
+  height: 12px;
+}
+
+
+
+.divButton {
+  display: flex; /* Convierte el div en un contenedor flex */
+  flex-direction: row; /* Alinea los elementos en fila (horizontalmente) */
+  gap: 10px; /* Opcional: Agrega un espacio entre los botones (ajusta el valor según necesites) */
+  /* justify-content: flex-start; /* Opcional: Alinea los botones al inicio del contenedor (izquierda) */
+  /* justify-content: flex-end; /* Opcional: Alinea los botones al final del contenedor (derecha) */
+  /* justify-content: center; /* Opcional: Centra los botones horizontalmente */
+  /* justify-content: space-between; /* Opcional: Distribuye el espacio entre los botones */
+  /* justify-content: space-around; /* Opcional: Distribuye el espacio alrededor de los botones */
+}
+
+/* Opcional: Puedes agregar estilos específicos a los botones si lo deseas */
+.divButton .button {
+  /* Tus estilos actuales para los botones */
+  padding: 8px 15px; /* Ejemplo de padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  /* ... otros estilos ... */
+}

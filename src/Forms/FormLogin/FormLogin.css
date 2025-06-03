@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #2c3e50;
+  --primary-hover: #1a252f;
+  --secondary-color: #3498db;
+  --text-color: #2c3e50;
+  --light-bg: #f8f9fa;
+  --border-color: #e0e0e0;
+}
+
+/* Luego usa estas variables en tus estilos */
+.divContainer {
+  background-color: var(--light-bg);
+  border: 1px solid var(--border-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.divButton button {
+  background-color: var(--primary-color);
+}
+
+.divButton button:hover {
+  background-color: var(--primary-hover);
+}

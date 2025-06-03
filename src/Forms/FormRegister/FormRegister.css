@@ -1,0 +1,59 @@
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+  background-color: #ffffff;
+}
+
+.labelForm{
+    color: black;
+    text-align: left;
+  }
+
+.inputForm {
+    background-color: #ffffff;
+    padding: 12px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Asegura que el ancho del input sea el mismo que el ancho del div */  
+  }
+
+  .divCampo {
+    display: flex;
+    flex-direction:column; /* Apila los elementos en columna */
+    margin-bottom: 10px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+  
+  .divCampo2 {
+    display: flex;  
+  }
+
+  /* En tu FormLogin.css */
+.divButton button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.divButton button:hover {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.divButton button:active {
+  transform: translateY(0);
+}
