@@ -6,12 +6,8 @@ import ProductDetail from './screens/ProductDetail/ProductDetail'
 import Registro from './screens/Registro/Registro'
 
 function App() {
-  //const [esAdmin, setEsAdmin] = useState()
   return (
     <div>  
-      {/*<button onClick={() => setEsAdmin(true)}>Soy admin</button>   
-      <h1>El cliente es: {esAdmin ? 'admin' : 'no admin'}</h1>*/}
-
       <Routes>
         <Route path='' element={<Registro/>}/>
         <Route path='/login' element={<Login/>}/>

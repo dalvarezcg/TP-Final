@@ -1,43 +1,61 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../../components/Navbar/Navbar'
-import Product from '../../components/Product/Product'
-import './ProductList.css' // Importamos los estilos
+import ProductCard from '../../components/ProductCard/ProductCard'
+import { getProducts } from '../../services/products'
 
 const ProductList = () => {
-  const [productos, setProductos] = useState([]);
-  const [cargando, setCargando] = useState(false);
+    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(false) // Iniciar como true
+    const [error, setError] = useState(false)
 
-  const ObtenerProductos = async () => {
-    setCargando(true);
-    try {
-      const response = await fetch('/products.json'); // Cambiado a ruta relativa
-      const data = await response.json();
-      setProductos(data);
-    } catch (error) {
-      console.error('Error al obtener productos:', error);
-    } finally {
-      setCargando(false);
+    const getProductsList = async () => {
+        setLoading(true)
+        setTimeout(
+            async () => {
+                const products_list_response = await getProducts()
+                console.log('products_list_response:', products_list_response)
+                if (products_list_response) {
+                    setProducts(products_list_response)
+                }
+                else {
+                    setError('Error al obtener productos')
+                }
+                setLoading(false)
+            },
+            2000
+        )
     }
-  }
 
-  useEffect(() => {
-    ObtenerProductos();
-  }, []);
+    useEffect(() => {
+        getProductsList()
+    }, [])
 
-  return (
-    <div className="product-list-container">
-      <Navbar/>      
-      {cargando ? (
-        <div className="loading-message">Cargando productos...</div>
-      ) : (
-        <div className="products-grid">
-          {productos.map(producto => (          
-            <Product key={producto.id} {...producto}/>          
-          ))}
+
+    const componentes = products.map(
+        (product) => {
+            return <ProductCard
+                {...product}
+                key={product.id}
+                title={product.title}
+            />
+        }
+    )
+    let content
+    if (loading) {
+        content = <h2>Cargando...</h2>
+    }
+    else {
+        if (error) {
+            content = <h2>{error}</h2>
+        }
+        else {
+            content = componentes
+        }
+    }
+
+    return (
+        <div >
+            {content}
         </div>
-      )}
-    </div>
-  )
+    )
 }
-
 export default ProductList
