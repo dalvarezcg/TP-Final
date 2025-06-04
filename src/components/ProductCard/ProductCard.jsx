@@ -1,11 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
+import "./ProductCard.css"
 
-const ProductCard = ({img, title, final_price, real_price, discount, is_admin, id,  key}) => {
-    //Key siempre valdra undefined
-    console.log(key)
-    console.log({is_admin})
-
+const ProductCard = ({img, title, final_price, real_price, discount, id,  key}) => {
     const [isBought, setIsBought] = useState(false)
 
     const handleClickBuyButton = () =>{
@@ -19,18 +16,20 @@ const ProductCard = ({img, title, final_price, real_price, discount, is_admin, i
         boton = <button disabled>Comprado</button>
     }
     else{
-        boton = <button onClick={handleClickBuyButton}>Comprar</button>
+        boton = <button 
+                onClick={handleClickBuyButton} 
+                className="divButton">Comprar</button>
     }
 
-    return (
+    return (        
         <div>
-            <img src={img} />
+            <img src={img}/>
             <h3>{title}</h3>
             <div>
-                <span>${real_price}</span>
-                <span>{discount}% OFF</span>
+                <span className="real_price">${real_price}</span>
+                <span className="discount">{discount}%OFF</span>
             </div>
-            <span>${final_price}</span>
+            <span className="final-price">${final_price}</span>
             {boton}
             <Link to={`/product/${id}`}>Ver detalle</Link>
         </div>

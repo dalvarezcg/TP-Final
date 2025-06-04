@@ -1,0 +1,77 @@
+span {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #7f8c8d;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight:600px;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span.real_price {
+    margin: 0;
+    display: block;
+    text-decoration: line-through;
+    font-size: 15px;
+    font-weight: 600;
+    color: #7f8c8d;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span.discount {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color:darkcyan;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span.final-price {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color:darkolivegreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    /* Estilos base del botón */
+    padding: 12px 20px; /* Más padding para un botón más grande */
+    border: none; /* Sin borde por defecto */
+    border-radius: 8px; /* Esquinas más redondeadas */
+    cursor: pointer;
+    font-size: 1rem; /* Tamaño de fuente estándar */
+    font-weight: 600; /* Texto más audaz */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%; /* Para que ocupe todo el ancho disponible en la tarjeta */
+    display: block; /* Asegura que el botón ocupe toda la línea */
+}
+
+/* Estilos específicos para el botón "Comprar" */
+button.divButton { /* Si tu botón "Comprar" usa la clase 'divButton' */
+    background-color:#7f8c8d; /* Azul vibrante */
+    color: white; /* Texto blanco */
+}
+
+button.divButton:hover {
+    background-color: #2980b9; /* Azul más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Un ligero desplazamiento hacia arriba */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilos para el botón "Comprado" (deshabilitado) */
+button:disabled {
+    background-color: #cccccc; /* Gris */
+    color: #666666; /* Texto gris más oscuro */
+    cursor: not-allowed; /* Cursor de "no permitido" */
+    box-shadow: none; /* Sin sombra cuando está deshabilitado */
+    transform: none; /* Sin efecto al pasar el mouse */
+}
