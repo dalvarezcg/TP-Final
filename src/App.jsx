@@ -1,9 +1,8 @@
-import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Login from './screens/Login/Login'
 import ProductList from './screens/ProductList/ProductList'
-import ProductDetail from './screens/ProductDetail/ProductDetail'
 import Registro from './screens/Registro/Registro'
+import ProductDetail from './screens/ProductDetail/ProductDetail'
 
 function App() {
   return (
@@ -17,5 +16,4 @@ function App() {
     </div>
   )
 }
-
 export default App

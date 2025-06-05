@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import "./ProductCard.css"
 
-const ProductCard = ({img, title, final_price, real_price, discount, id,  key}) => {
+const ProductCard = ({img, title, final_price, real_price, discount, id}) => {
     const [isBought, setIsBought] = useState(false)
 
     const handleClickBuyButton = () =>{
@@ -11,7 +11,6 @@ const ProductCard = ({img, title, final_price, real_price, discount, id,  key}) 
     }
 
     let boton 
-
     if(isBought){
         boton = <button disabled>Comprado</button>
     }
@@ -26,12 +25,15 @@ const ProductCard = ({img, title, final_price, real_price, discount, id,  key}) 
             <img src={img}/>
             <h3>{title}</h3>
             <div>
-                <span className="real_price">${real_price}</span>
+                <span className="real_price">U$s{real_price}</span>
                 <span className="discount">{discount}%OFF</span>
             </div>
-            <span className="final-price">${final_price}</span>
+            <span className="final-price">U$s{final_price}</span>
             {boton}
-            <Link to={`/product/${id}`}>Ver detalle</Link>
+            <h3></h3>
+            <Link to={`/producto-detalle/${id}`} 
+                  className="product-detail">Ver detalle
+            </Link>
         </div>
     )
 }

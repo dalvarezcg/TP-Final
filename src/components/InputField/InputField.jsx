@@ -1,4 +1,3 @@
-//tiene que recibir el label, error, type, 
 import './InputField.css'
 
 export function InputField({LabelTexto, InputPlaceHolder, InputId}) {

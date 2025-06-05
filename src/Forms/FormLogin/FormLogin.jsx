@@ -8,10 +8,14 @@ function FormLogin() {
       <div className="divContainer">
         <form>          
           <div className="divCampo2">
-            <InputField LabelTexto="User" InputPlaceHolder="Usuario" InputId="user" />            
+            <InputField LabelTexto="Usuario" 
+                        InputPlaceHolder="Ingrese usuario" 
+                        InputId="user" />            
           </div>
           <div className='divCampo'>
-            <InputPasswordField LabelTexto="Password" InputPlaceHolder="Contraseña" InputId="password" />            
+            <InputPasswordField LabelTexto="Contraseña" 
+                                InputPlaceHolder="Ingrese su contraseña" 
+                                InputId="password" />            
           </div>          
           <div className='divButton'>
             <button type="submit">Ingresar</button>

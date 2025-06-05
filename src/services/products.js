@@ -30,40 +30,7 @@ export const getProducts = async () => {
     }
 }
 
-/* Ejemplo explicativo del spread operator
-
-const data = {
-get: () => {
-        return { price: 20, title: 'juan' }
-    }
-}
-
-const id = 1
-
-const producto = { id: id, ...data.get() }
-console.log(producto)
-*/
-
-/* 
-export const getProducts = async () =>{
-    try{
-        const response = await fetch(
-            'http://localhost:5173/api/products.json',
-            {
-                method: 'GET'
-            }
-        )
-        const data = await response.json()
-        return data
-    }
-    catch(error){
-        console.error('Error al obtener productos:', error)
-        return null
-    }
-} */
-
-export const getProductById = async ({ product_id }) => {
+export const getProductById = async ({ id }) => {
     const products = await getProducts()
-    return products.find(product => product.id == product_id)
-
+    return products.find(product => product.id == id)
 }
